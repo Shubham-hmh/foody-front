@@ -7,7 +7,7 @@ const Signup = () => {
     const [credentials, setcredentials] = useState({ name: "", email: "", password: "", geolocation: "" });
     const handleSubmit = async (e) => {
         e.preventDefault();
-        const response = await fetch("/api/creatuser", {
+        const response = await fetch("https://foody-back.onrender.com/api/creatuser", {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

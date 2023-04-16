@@ -12,7 +12,7 @@ const Home = () => {
 
 
     const loadData = async () => {
-        let response = await fetch("/api/foodData", {
+        let response = await fetch("https://foody-back.onrender.com/api/foodData", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json'
