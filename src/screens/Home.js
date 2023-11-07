@@ -64,8 +64,7 @@ const Home = () => {
       
                 {
                  
-                    foodCat !== []
-                        ? foodCat && foodCat.map((data) => {
+                         foodCat && foodCat.map((data) => {
                             return (
                                 <div className='row mb-3'>
                                     <div key={data._id} className="fs-3 m-3">
@@ -73,8 +72,7 @@ const Home = () => {
                                     </div>
                                     <hr />
 
-                                    {foodItem !== [] ?
-                                        foodItem && foodItem.filter((item) => (item.categoryname === data.categoryname) && (item.name.toLowerCase().includes(search.toLocaleLowerCase())))
+                                    {    foodItem && foodItem.filter((item) => (item.categoryname === data.categoryname) && (item.name.toLowerCase().includes(search.toLocaleLowerCase())))
                                             .map(filterItems => {
                                                 return (
                                                     <div key={filterItems._id} className="col-12 col-md-6 col-lg-3">
@@ -85,11 +83,11 @@ const Home = () => {
                                                     </div>
                                                 )
                                             })
-                                        : <div>No such data found</div>}
+                                    }
                                 </div>
                             )
                         })
-                        : ""
+                        
                 }
 
             </div>
